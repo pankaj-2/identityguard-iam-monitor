@@ -51,9 +51,18 @@
 | `data/genai_analysis.json` | ✅ Generated at runtime | Written by `run()` |
 | `.env` | ✅ Fixed | Corrected from shell `echo` to plain `KEY=VALUE` |
 
+## Completed phases (continued)
+- [x] Phase 4: Report + main.py
+
+## Phase 4 deliverables
+| File | Status | Notes |
+|---|---|---|
+| `reporting/risk_report.py` | ✅ Created | Full implementation — self-contained HTML |
+| `main.py` | ✅ Updated | Full pipeline entry point |
+| `reporting/output/report.html` | ✅ Generated at runtime | Written by `generate_report()` |
+
 ## Upcoming phases
-- [ ] Phase 4: HTML report (`reporting/risk_report.py`)
-- [ ] Phase 5: Integration tests + README
+- [ ] Phase 5: README + GitHub
 
 ## How to regenerate mock data
 ```bash
