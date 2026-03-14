@@ -61,8 +61,18 @@
 | `main.py` | ✅ Updated | Full pipeline entry point |
 | `reporting/output/report.html` | ✅ Generated at runtime | Written by `generate_report()` |
 
-## Upcoming phases
-- [ ] Phase 5: README + GitHub
+## Completed phases (continued)
+- [x] Phase 5: README + GitHub
+
+## Phase 5 deliverables
+| File | Status | Notes |
+|---|---|---|
+| `README.md` | ✅ Created | Full project documentation |
+| `.env.example` | ✅ Created | Template for Gemini API key |
+
+---
+
+## ✅ ALL PHASES COMPLETE
 
 ## How to regenerate mock data
 ```bash

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdentityGuard — IAM Threat Detection Report</title>
+  <meta name="description" content="AI-powered Azure AD IAM threat detection report.">
+  
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: #f0f2f5;
+        color: #2c3e50;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+
+      /* ── HEADER ─────────────────────────────────────────────── */
+      .header {
+        background: linear-gradient(135deg, #1a1f36 0%, #2d3561 100%);
+        color: #fff;
+        padding: 24px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      }
+      .header-title {
+        font-size: 1.55rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+      .header-shield {
+        font-size: 1.8rem;
+        margin-right: 14px;
+      }
+      .header-meta {
+        font-size: 0.82rem;
+        opacity: 0.75;
+        text-align: right;
+        line-height: 1.5;
+      }
+
+      /* ── MAIN CONTENT ────────────────────────────────────────── */
+      .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 24px 60px;
+      }
+
+      /* ── RISK BANNER ─────────────────────────────────────────── */
+      .risk-banner {
+        border-radius: 14px;
+        padding: 32px 40px;
+        text-align: center;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      }
+      .risk-banner .score { font-size: 5rem; font-weight: 900; line-height: 1; }
+      .risk-banner .label { font-size: 1.05rem; font-weight: 600; opacity: 0.9; margin-top: 6px; }
+
+      /* ── SUMMARY BOX ─────────────────────────────────────────── */
+      .executive-summary {
+        background: #ffffff;
+        border-left: 5px solid #2d3561;
+        border-radius: 0 10px 10px 0;
+        padding: 20px 24px;
+        margin-bottom: 28px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        font-size: 0.96rem;
+        line-height: 1.7;
+        color: #34495e;
+      }
+      .executive-summary h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #2d3561;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+
+      /* ── METRICS ROW ─────────────────────────────────────────── */
+      .metrics-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-bottom: 34px;
+      }
+      .metric-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 22px 18px;
+        text-align: center;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        border-top: 4px solid #2d3561;
+      }
+      .metric-card .value {
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: #2d3561;
+        line-height: 1;
+      }
+      .metric-card .desc {
+        font-size: 0.8rem;
+        color: #7f8c8d;
+        margin-top: 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      /* ── SECTION HEADINGS ───────────────────────────────────── */
+      .section-heading {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1a1f36;
+        margin-bottom: 14px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e0e4ef;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .section { margin-bottom: 38px; }
+
+      /* ── TABLES ─────────────────────────────────────────────── */
+      .tbl-wrap {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+      }
+      thead th {
+        background: #1a1f36;
+        color: #fff;
+        padding: 11px 14px;
+        text-align: left;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+      }
+      tbody tr {
+        border-bottom: 1px solid #ecf0f4;
+        transition: background 0.15s;
+      }
+      tbody tr:last-child { border-bottom: none; }
+      tbody tr:hover { background: #f7f9fc !important; }
+      tbody td {
+        padding: 11px 14px;
+        background: #fff;
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      .row-critical td { background: #fff0f0 !important; }
+      .row-critical:hover td { background: #ffe4e4 !important; }
+
+      /* ── TOP THREATS ─────────────────────────────────────────── */
+      .threats-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .threats-list li {
+        background: #fff;
+        border-left: 5px solid #c0392b;
+        border-radius: 0 10px 10px 0;
+        padding: 14px 18px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        font-size: 0.93rem;
+        color: #2c3e50;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .threats-list li .num {
+        background: #c0392b;
+        color: #fff;
+        font-weight: 800;
+        font-size: 0.85rem;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      /* ── EMPTY STATE ─────────────────────────────────────────── */
+      .empty-state {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: center;
+        color: #95a5a6;
+        font-style: italic;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+
+      /* ── FOOTER ──────────────────────────────────────────────── */
+      .footer {
+        text-align: center;
+        color: #b0b8c9;
+        font-size: 0.78rem;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #dde2ec;
+      }
+
+      @media (max-width: 900px) {
+        .metrics-row { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .metrics-row { grid-template-columns: 1fr; }
+        .header { flex-direction: column; gap: 12px; }
+      }
+    </style>
+    
+</head>
+<body>
+  
+    <header class="header">
+      <div style="display:flex;align-items:center;">
+        <span class="header-shield">🛡️</span>
+        <span class="header-title">IdentityGuard — IAM Threat Detection Report</span>
+      </div>
+      <div class="header-meta">
+        Generated&nbsp;2026-03-14 09:12:09 UTC<br>
+        Azure AD · Gemini AI Analysis
+      </div>
+    </header>
+    
+  <div class="content">
+    
+    <div class="risk-banner" style="background:#27ae60;color:#ffffff;">
+      <div class="score">-1</div>
+      <div class="label">Overall Risk Score / 100 &nbsp;·&nbsp; UNKNOWN</div>
+    </div>
+    
+    
+    <div class="executive-summary">
+      <h2>Executive Summary</h2>
+      Gemini API call failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    </div>
+    
+    <div class="metrics-row"><div class="metric-card"><div class="value">80</div><div class="desc">Total Users Analyzed</div></div><div class="metric-card"><div class="value">3</div><div class="desc">Impossible Travel Events</div></div><div class="metric-card"><div class="value">18</div><div class="desc">Privileged Accounts Flagged</div></div><div class="metric-card"><div class="value">6</div><div class="desc">SPNs with Critical Issues</div></div></div>
+
+    <div class="section">
+      <div class="section-heading">🚨 Impossible Travel Events</div>
+      
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Gap (mins)</th>
+            <th>Severity</th>
+          </tr>
+        </thead>
+        <tbody><tr class="row-critical"><td>emily.hall@contoso.com</td><td>JP</td><td>GB</td><td>9.0</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td></tr><tr class="row-critical"><td>suresh.garcia@contoso.com</td><td>DE</td><td>BR</td><td>13.0</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td></tr><tr class="row-critical"><td>astrid.nair@contoso.com</td><td>IN</td><td>US</td><td>14.0</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td></tr></tbody>
+      </table>
+    </div>
+    
+    </div>
+
+    <div class="section">
+      <div class="section-heading">🔑 Privilege Audit Findings</div>
+      
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Finding</th>
+            <th>Role</th>
+            <th>Severity</th>
+            <th>Recommendation</th>
+          </tr>
+        </thead>
+        <tbody><tr><td>lena.laurent@contoso.com</td><td>PERMANENT_GLOBAL_ADMIN</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Convert permanent Global Administrator assignment to PIM (Privileged Identity Management) just-in-time activation. Require approval, MFA on activation, and set maximum activation duration to 8 hours. Assign to a dedicated break-glass account only.</td></tr><tr><td>lena.laurent@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>lena.laurent@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 189 days while holding Global Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>rohan.cohen@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Exchange Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>priya.davis@contoso.com</td><td>PERMANENT_GLOBAL_ADMIN</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Convert permanent Global Administrator assignment to PIM (Privileged Identity Management) just-in-time activation. Require approval, MFA on activation, and set maximum activation duration to 8 hours. Assign to a dedicated break-glass account only.</td></tr><tr><td>lars.weber@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Compliance Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 200 days while holding Compliance Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>michael.santos@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Teams Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 307 days while holding Teams Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>suresh.garcia@contoso.com</td><td>PERMANENT_GLOBAL_ADMIN</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Convert permanent Global Administrator assignment to PIM (Privileged Identity Management) just-in-time activation. Require approval, MFA on activation, and set maximum activation duration to 8 hours. Assign to a dedicated break-glass account only.</td></tr><tr><td>suresh.garcia@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 122 days while holding Global Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>kavya.oliveira@contoso.com</td><td>PERMANENT_GLOBAL_ADMIN</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Convert permanent Global Administrator assignment to PIM (Privileged Identity Management) just-in-time activation. Require approval, MFA on activation, and set maximum activation duration to 8 hours. Assign to a dedicated break-glass account only.</td></tr><tr><td>nour.anderson@contoso.com</td><td>PERMANENT_GLOBAL_ADMIN</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Convert permanent Global Administrator assignment to PIM (Privileged Identity Management) just-in-time activation. Require approval, MFA on activation, and set maximum activation duration to 8 hours. Assign to a dedicated break-glass account only.</td></tr><tr><td>nour.anderson@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Global Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 188 days while holding Global Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>rohan.weber@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Teams Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 351 days while holding Teams Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>layla.williams@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Compliance Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>layla.williams@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Compliance Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 303 days while holding Compliance Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>arjun.martinez@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Exchange Administrator</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 203 days while holding Exchange Administrator. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>ananya.walker@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Global Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>charlotte.allen@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Security Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>charlotte.allen@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Security Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 351 days while holding Security Reader. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>wei.lee@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Security Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>camille.martinez@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Reports Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 189 days while holding Reports Reader. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>antoine.fontaine@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Reports Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr><tr><td>lena.hoang@contoso.com</td><td>INACTIVE_PRIVILEGED_USER</td><td>Security Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>User has not signed in for 189 days while holding Security Reader. Disable the account or remove privileged roles immediately. Conduct an access review (Entra Identity Governance) to determine if the role is still required. If the account is a service account, rotate all associated credentials.</td></tr><tr><td>layla.souza@contoso.com</td><td>NO_MFA_REGISTERED</td><td>Global Reader</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Enroll user in Microsoft Authenticator or FIDO2 security key immediately. Block sign-in until MFA is registered via a Conditional Access policy targeting the user. For privileged accounts, enforce phishing-resistant MFA (FIDO2 or certificate-based authentication).</td></tr></tbody>
+      </table>
+    </div>
+    
+    </div>
+
+    <div class="section">
+      <div class="section-heading">⚙️ Service Principal Risk</div>
+      
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>SPN Name</th>
+            <th>Finding</th>
+            <th>Severity</th>
+            <th>Recommendation</th>
+          </tr>
+        </thead>
+        <tbody><tr><td>BackupAutomationApp</td><td style='font-size:0.83em;'>Service principal &#x27;BackupAutomationApp&#x27; has the &#x27;Owner&#x27; role, granting full resource management rights over the subscription.</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td><td style='font-size:0.83em;color:#555;'>Replace &#x27;Owner&#x27; with the least-privilege role needed (e.g., Contributor, or a custom role scoped to specific resource groups). Conduct an immediate access review and audit recent activity. Rotate all associated credentials and enable Defender for Cloud alerts.</td></tr><tr><td>ComplianceScannerSP</td><td style='font-size:0.83em;'>Service principal &#x27;ComplianceScannerSP&#x27; has the &#x27;Owner&#x27; role, granting full resource management rights over the subscription.</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td><td style='font-size:0.83em;color:#555;'>Replace &#x27;Owner&#x27; with the least-privilege role needed (e.g., Contributor, or a custom role scoped to specific resource groups). Conduct an immediate access review and audit recent activity. Rotate all associated credentials and enable Defender for Cloud alerts.</td></tr><tr><td>FinanceReportingApp</td><td style='font-size:0.83em;'>Service principal &#x27;FinanceReportingApp&#x27; has the &#x27;Owner&#x27; role, granting full resource management rights over the subscription.</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td><td style='font-size:0.83em;color:#555;'>Replace &#x27;Owner&#x27; with the least-privilege role needed (e.g., Contributor, or a custom role scoped to specific resource groups). Conduct an immediate access review and audit recent activity. Rotate all associated credentials and enable Defender for Cloud alerts.</td></tr><tr><td>TeamsNotificationBot</td><td style='font-size:0.83em;'>Service principal &#x27;TeamsNotificationBot&#x27; has the &#x27;Owner&#x27; role, granting full resource management rights over the subscription.</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td><td style='font-size:0.83em;color:#555;'>Replace &#x27;Owner&#x27; with the least-privilege role needed (e.g., Contributor, or a custom role scoped to specific resource groups). Conduct an immediate access review and audit recent activity. Rotate all associated credentials and enable Defender for Cloud alerts.</td></tr><tr><td>VaultSecretsReader</td><td style='font-size:0.83em;'>Service principal &#x27;VaultSecretsReader&#x27; has the &#x27;Owner&#x27; role, granting full resource management rights over the subscription.</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td><td style='font-size:0.83em;color:#555;'>Replace &#x27;Owner&#x27; with the least-privilege role needed (e.g., Contributor, or a custom role scoped to specific resource groups). Conduct an immediate access review and audit recent activity. Rotate all associated credentials and enable Defender for Cloud alerts.</td></tr><tr><td>YammerIntegrationSP</td><td style='font-size:0.83em;'>Service principal &#x27;YammerIntegrationSP&#x27; has the &#x27;Owner&#x27; role, granting full resource management rights over the subscription.</td><td><span style="background:#c0392b;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">CRITICAL</span></td><td style='font-size:0.83em;color:#555;'>Replace &#x27;Owner&#x27; with the least-privilege role needed (e.g., Contributor, or a custom role scoped to specific resource groups). Conduct an immediate access review and audit recent activity. Rotate all associated credentials and enable Defender for Cloud alerts.</td></tr><tr><td>IdentityGovernanceSP</td><td style='font-size:0.83em;'>Service principal &#x27;IdentityGovernanceSP&#x27; has a client secret that expired 208 day(s) ago (expired: 2025-08-18).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>NightlyBatchProcessor</td><td style='font-size:0.83em;'>Service principal &#x27;NightlyBatchProcessor&#x27; has a client secret that expired 100 day(s) ago (expired: 2025-12-04).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>OnboardingAutomation</td><td style='font-size:0.83em;'>Service principal &#x27;OnboardingAutomation&#x27; has a client secret that expired 53 day(s) ago (expired: 2026-01-20).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>PowerBIDatasetRefresher</td><td style='font-size:0.83em;'>Service principal &#x27;PowerBIDatasetRefresher&#x27; has a client secret that expired 39 day(s) ago (expired: 2026-02-03).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>TeamsNotificationBot</td><td style='font-size:0.83em;'>Service principal &#x27;TeamsNotificationBot&#x27; has a client secret that expired 260 day(s) ago (expired: 2025-06-27).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>VaultSecretsReader</td><td style='font-size:0.83em;'>Service principal &#x27;VaultSecretsReader&#x27; has a client secret that expired 315 day(s) ago (expired: 2025-05-03).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>AlertOrchestrationSP</td><td style='font-size:0.83em;'>Service principal &#x27;AlertOrchestrationSP&#x27; has a client secret that expired 268 day(s) ago (expired: 2025-06-19).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>CertRenewalBot</td><td style='font-size:0.83em;'>Service principal &#x27;CertRenewalBot&#x27; has a client secret that expired 332 day(s) ago (expired: 2025-04-16).</td><td><span style="background:#e74c3c;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">HIGH</span></td><td style='font-size:0.83em;color:#555;'>Delete the expired credential immediately and generate a new secret with a maximum lifetime of 12 months. Store the new secret in Azure Key Vault and rotate on a regular schedule. Enable certificate-based auth where possible.</td></tr><tr><td>DataPipelineOrchestrator</td><td style='font-size:0.83em;'>Service principal &#x27;DataPipelineOrchestrator&#x27; has no recorded sign-in activity (lastSignInDateTime is null). It may be an abandoned application.</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Investigate whether &#x27;DataPipelineOrchestrator&#x27; is still required (never used). If the application is decommissioned, delete the SPN and revoke all associated credentials. If it is still needed, document its purpose and reset credentials to ensure only authorised parties hold them.</td></tr><tr><td>GitHubActionsDeployer</td><td style='font-size:0.83em;'>Service principal &#x27;GitHubActionsDeployer&#x27; has not signed in for 202 day(s) (last seen: 2025-08-24).</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Investigate whether &#x27;GitHubActionsDeployer&#x27; is still required (202 days idle). If the application is decommissioned, delete the SPN and revoke all associated credentials. If it is still needed, document its purpose and reset credentials to ensure only authorised parties hold them.</td></tr><tr><td>IdentityGovernanceSP</td><td style='font-size:0.83em;'>Service principal &#x27;IdentityGovernanceSP&#x27; has not signed in for 394 day(s) (last seen: 2025-02-13).</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Investigate whether &#x27;IdentityGovernanceSP&#x27; is still required (394 days idle). If the application is decommissioned, delete the SPN and revoke all associated credentials. If it is still needed, document its purpose and reset credentials to ensure only authorised parties hold them.</td></tr><tr><td>QuarantineManagerSP</td><td style='font-size:0.83em;'>Service principal &#x27;QuarantineManagerSP&#x27; has not signed in for 500 day(s) (last seen: 2024-10-30).</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Investigate whether &#x27;QuarantineManagerSP&#x27; is still required (500 days idle). If the application is decommissioned, delete the SPN and revoke all associated credentials. If it is still needed, document its purpose and reset credentials to ensure only authorised parties hold them.</td></tr><tr><td>YammerIntegrationSP</td><td style='font-size:0.83em;'>Service principal &#x27;YammerIntegrationSP&#x27; has not signed in for 224 day(s) (last seen: 2025-08-02).</td><td><span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:12px;font-size:0.78em;font-weight:700;letter-spacing:0.04em;">MEDIUM</span></td><td style='font-size:0.83em;color:#555;'>Investigate whether &#x27;YammerIntegrationSP&#x27; is still required (224 days idle). If the application is decommissioned, delete the SPN and revoke all associated credentials. If it is still needed, document its purpose and reset credentials to ensure only authorised parties hold them.</td></tr></tbody>
+      </table>
+    </div>
+    
+    </div>
+
+    <div class="section">
+      <div class="section-heading">📋 User Access Review (UAR) Decisions</div>
+      <div class="empty-state">No UAR decisions available.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-heading">🔥 Top 3 Threats (AI Assessment)</div>
+      <div class="empty-state">No threat information available.</div>
+    </div>
+
+    <div class="footer">
+      IdentityGuard IAM Monitor &nbsp;·&nbsp; Generated 2026-03-14 09:12:09 UTC
+      &nbsp;·&nbsp; Powered by Google Gemini AI
+    </div>
+  </div>
+</body>
+</html>
