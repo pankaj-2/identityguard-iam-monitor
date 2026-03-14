@@ -1,0 +1,882 @@
+[
+  {
+    "id": "0ca2ea22-43c1-4885-a644-6873a3c95556",
+    "displayName": "Arjun Thomas",
+    "userPrincipalName": "arjun.thomas@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-03T23:50:47Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "7f193974-88c6-4fb9-955d-7e2644b461af",
+    "displayName": "Camille Martinez",
+    "userPrincipalName": "camille.martinez@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-02T04:37:06Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "498a4238-c5fc-4f5b-9225-d2e4567aff67",
+    "displayName": "Astrid Nair",
+    "userPrincipalName": "astrid.nair@contoso.com",
+    "assignedRoles": [
+      "Compliance Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-25T04:00:36Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "3fe8cb37-8eae-4266-89ff-62d282e8d005",
+    "displayName": "Lena Laurent",
+    "userPrincipalName": "lena.laurent@contoso.com",
+    "assignedRoles": [
+      "Global Administrator"
+    ],
+    "lastSignInDateTime": "2025-09-06T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "a8ad52a8-7767-4a64-9fff-57ded4f51e51",
+    "displayName": "Ananya Walker",
+    "userPrincipalName": "ananya.walker@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-03-12T00:04:54Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "eeb82275-a646-4333-9f7c-b20429f34721",
+    "displayName": "Fatima Laurent",
+    "userPrincipalName": "fatima.laurent@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-03-02T20:46:18Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "7edb8835-7598-4b92-bfc1-395dd3aff954",
+    "displayName": "Kavya Jackson",
+    "userPrincipalName": "kavya.jackson@contoso.com",
+    "assignedRoles": [
+      "SharePoint Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-19T00:49:31Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "181c9541-0fbd-4341-8d89-91df172ddb92",
+    "displayName": "Ajay Allen",
+    "userPrincipalName": "ajay.allen@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-16T06:45:08Z",
+    "accountEnabled": false,
+    "mfaRegistered": true
+  },
+  {
+    "id": "67c8e707-7687-4ac8-bbd7-9fa629f7591e",
+    "displayName": "Pierre Dubois",
+    "userPrincipalName": "pierre.dubois@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-03-12T01:01:24Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "e8a9dc62-c4e7-44eb-bcdc-4ce6aecf33c4",
+    "displayName": "Pierre Young",
+    "userPrincipalName": "pierre.young@contoso.com",
+    "assignedRoles": [
+      "Compliance Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-01T11:30:51Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "32f9ac92-c24f-42f6-aa46-4422819bd1d3",
+    "displayName": "Ingrid Le",
+    "userPrincipalName": "ingrid.le@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-02-18T13:32:03Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f83d50db-80e0-43bb-bcec-1237008c081a",
+    "displayName": "Charlotte Allen",
+    "userPrincipalName": "charlotte.allen@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2025-03-28T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "a4ac7c26-269e-45c6-970c-5383c5409eac",
+    "displayName": "Suresh Davis",
+    "userPrincipalName": "suresh.davis@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-02-22T02:09:17Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "15e72d37-394c-446b-8feb-f1d828ad546c",
+    "displayName": "Rohan Cohen",
+    "userPrincipalName": "rohan.cohen@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-22T17:26:44Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "482fb591-ee79-4663-bcea-b11316e38103",
+    "displayName": "Priya Davis",
+    "userPrincipalName": "priya.davis@contoso.com",
+    "assignedRoles": [
+      "Global Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-20T14:11:43Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "d568c87b-1c6d-4bf8-9c9c-ba1a0deb1129",
+    "displayName": "Camille Davis",
+    "userPrincipalName": "camille.davis@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-03-01T02:31:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "18095983-2c14-4f7e-bba0-b864259bfc01",
+    "displayName": "Astrid Mohammed",
+    "userPrincipalName": "astrid.mohammed@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-02-26T04:04:20Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "1fda8a1b-550c-4cab-90fb-fe9cba61377f",
+    "displayName": "Wei Lee",
+    "userPrincipalName": "wei.lee@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-03-03T02:25:11Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "b30c26b1-c2eb-4bed-9d01-9c9dfebdf3b9",
+    "displayName": "Arjun Watanabe",
+    "userPrincipalName": "arjun.watanabe@contoso.com",
+    "assignedRoles": [
+      "Compliance Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-14T04:00:37Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "c20d3431-8c68-4310-b600-bdc055d367f3",
+    "displayName": "Emma Hall",
+    "userPrincipalName": "emma.hall@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-03-06T13:54:55Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "c0e400d8-492c-4c1e-b4ba-d595b7c44af1",
+    "displayName": "Rohan Le",
+    "userPrincipalName": "rohan.le@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-03-09T10:29:25Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "b418a584-766c-47ea-b46c-ee0d45dea0ef",
+    "displayName": "Hui Girard",
+    "userPrincipalName": "hui.girard@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-02-12T14:11:14Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "8731b445-fc30-48a8-8611-fbc4e618b13b",
+    "displayName": "Emma Dubois",
+    "userPrincipalName": "emma.dubois@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-27T15:31:53Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "2599673d-3a0c-4565-a0b9-2de5df43a2c7",
+    "displayName": "Rohan Dupont",
+    "userPrincipalName": "rohan.dupont@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-02-23T14:45:23Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "4a71a156-fbf1-445f-8860-2384575130e6",
+    "displayName": "Kavya Smith",
+    "userPrincipalName": "kavya.smith@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-12T06:04:39Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "59e85329-6d8b-4d9f-be40-209598845fbd",
+    "displayName": "Lars Weber",
+    "userPrincipalName": "lars.weber@contoso.com",
+    "assignedRoles": [
+      "Compliance Administrator"
+    ],
+    "lastSignInDateTime": "2025-08-26T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f0481ec1-79ee-47b9-925f-30f3048487af",
+    "displayName": "Nikhil Pereira",
+    "userPrincipalName": "nikhil.pereira@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-02-16T16:08:34Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "63d6954f-907c-43e2-9eba-064dff138f22",
+    "displayName": "Michael Santos",
+    "userPrincipalName": "michael.santos@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2025-05-11T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "9729368a-0f8e-400d-90a3-087805f1b3ec",
+    "displayName": "Suresh Garcia",
+    "userPrincipalName": "suresh.garcia@contoso.com",
+    "assignedRoles": [
+      "Global Administrator"
+    ],
+    "lastSignInDateTime": "2025-11-12T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "d35841fd-c19c-4129-8a2f-282f764818e2",
+    "displayName": "Camille Martinez",
+    "userPrincipalName": "camille.martinez@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2025-09-06T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "e3f6f767-377e-4803-a5f2-238ae32ce54b",
+    "displayName": "Ahmed Moore",
+    "userPrincipalName": "ahmed.moore@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-08T23:30:45Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "7a6a1d5c-62d5-4c47-9a7b-7d0aef01aab5",
+    "displayName": "Kavya Oliveira",
+    "userPrincipalName": "kavya.oliveira@contoso.com",
+    "assignedRoles": [
+      "Global Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-16T14:53:57Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "b78abc71-c8da-4d23-86ab-342a27ee98c3",
+    "displayName": "Raj Patel",
+    "userPrincipalName": "raj.patel@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-13T00:49:34Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "283480cd-5b26-4e8d-8cb1-4352e3d891bd",
+    "displayName": "Sakura Dubois",
+    "userPrincipalName": "sakura.dubois@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-03-08T19:59:36Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "a99dd817-e495-43f6-b6ab-63bea6aff763",
+    "displayName": "Fatima Meyer",
+    "userPrincipalName": "fatima.meyer@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-19T08:09:25Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "a772bbb8-308b-4ef4-84a2-4dff772ae70b",
+    "displayName": "Nour Anderson",
+    "userPrincipalName": "nour.anderson@contoso.com",
+    "assignedRoles": [
+      "Global Administrator"
+    ],
+    "lastSignInDateTime": "2025-09-07T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "55d69b90-812c-4fc2-920b-b6969b6dea60",
+    "displayName": "Deepa Pham",
+    "userPrincipalName": "deepa.pham@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-02-18T21:56:57Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "99d35699-d493-41b1-8091-ca96e5ba0b77",
+    "displayName": "Wei Tran",
+    "userPrincipalName": "wei.tran@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-03-12T15:54:06Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "d6f781db-a27f-4404-9ec0-d346549349d1",
+    "displayName": "Hana Johnson",
+    "userPrincipalName": "hana.johnson@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-02T04:03:24Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "99abd437-0109-403a-8ae1-a47551ffca75",
+    "displayName": "Hana Nair",
+    "userPrincipalName": "hana.nair@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-28T10:22:24Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "ff7a15d4-e5db-41fa-8c8b-ad01de7b283b",
+    "displayName": "Astrid Thompson",
+    "userPrincipalName": "astrid.thompson@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-06T23:34:52Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "9c11e238-0b4c-44e0-9d0f-09741927075c",
+    "displayName": "Felix Lima",
+    "userPrincipalName": "felix.lima@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-13T05:59:31Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f98c7aa6-62f8-4033-af53-629de27a7751",
+    "displayName": "Pooja Garcia",
+    "userPrincipalName": "pooja.garcia@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-25T01:27:44Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "62ab1f84-21e7-4a7b-a30b-1f6acbe99ee6",
+    "displayName": "Nicolas Johnson",
+    "userPrincipalName": "nicolas.johnson@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-02T22:49:32Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "500106a4-f4ee-46a2-bf39-a7d9b20bd6bf",
+    "displayName": "Felix Tran",
+    "userPrincipalName": "felix.tran@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-02-20T14:40:01Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "c5e2ab8e-6d8d-40fa-801c-0f5d5d56ae08",
+    "displayName": "Ashley Schneider",
+    "userPrincipalName": "ashley.schneider@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-14T04:12:25Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "b2316c0d-9716-4732-844d-5f6483b825c8",
+    "displayName": "Maximilian Thompson",
+    "userPrincipalName": "maximilian.thompson@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-07T10:19:06Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "d140a7f9-3830-4f1c-ba4d-8a0d1e1409c1",
+    "displayName": "Nour Schmidt",
+    "userPrincipalName": "nour.schmidt@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-03-11T11:32:07Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f44777ae-2a46-4e5c-912f-f3687d0eaf2d",
+    "displayName": "Arjun Ito",
+    "userPrincipalName": "arjun.ito@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-02-21T23:49:13Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "fdbeeb45-9c9a-4378-895d-af0cbb51f133",
+    "displayName": "Geeta Patel",
+    "userPrincipalName": "geeta.patel@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-11T09:02:51Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "697b6028-675c-4032-be99-d50e49e89cc8",
+    "displayName": "Harry Hoang",
+    "userPrincipalName": "harry.hoang@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-03-01T03:57:41Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "208ceda9-bef7-4f9c-ae68-d76c6923c20b",
+    "displayName": "Ananya Moreau",
+    "userPrincipalName": "ananya.moreau@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-02-21T00:17:54Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "06e77f7d-603a-4fc2-9c6c-4dacee06b12b",
+    "displayName": "Ajay Fontaine",
+    "userPrincipalName": "ajay.fontaine@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2026-02-13T00:04:50Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f344074b-73ec-44f6-92f0-b969b27d6524",
+    "displayName": "Miguel Fontaine",
+    "userPrincipalName": "miguel.fontaine@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2025-09-13T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "c4283de7-70aa-4e48-a2d0-5f537b118978",
+    "displayName": "Antoine Fontaine",
+    "userPrincipalName": "antoine.fontaine@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-06T02:09:16Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "86ff24ff-133a-4303-a91d-5444d6594eed",
+    "displayName": "Vikram Pereira",
+    "userPrincipalName": "vikram.pereira@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-07T17:37:41Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "144418b0-9f56-45a4-b76a-9940f7fe4cb2",
+    "displayName": "Aiko Allen",
+    "userPrincipalName": "aiko.allen@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-02-21T01:34:39Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "40dcff17-2fa8-44df-ac56-262e5ea9c6f8",
+    "displayName": "Rohan Weber",
+    "userPrincipalName": "rohan.weber@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2025-03-28T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "5f02b937-5ebc-4236-ac3a-817d9eafe239",
+    "displayName": "Fang Ito",
+    "userPrincipalName": "fang.ito@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-03-10T23:48:23Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "a20cdc07-b387-432b-9fe6-beb225197ef4",
+    "displayName": "Astrid Reddy",
+    "userPrincipalName": "astrid.reddy@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-22T18:37:14Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "d6b265cd-8f5e-41d1-99fb-b81b852a3d98",
+    "displayName": "Sanjay Abdullah",
+    "userPrincipalName": "sanjay.abdullah@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-01T13:47:44Z",
+    "accountEnabled": false,
+    "mfaRegistered": true
+  },
+  {
+    "id": "25e60e34-d4cc-413b-b516-1e03f33018a0",
+    "displayName": "Sanjay Sharma",
+    "userPrincipalName": "sanjay.sharma@contoso.com",
+    "assignedRoles": [
+      "SharePoint Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-12T14:16:14Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f82a4b8c-b15d-4b79-ac48-1d7704be87eb",
+    "displayName": "Valentina Laurent",
+    "userPrincipalName": "valentina.laurent@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-11T10:01:39Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "2ac8dc78-9572-450f-81c5-e669584883a5",
+    "displayName": "Jessica Sato",
+    "userPrincipalName": "jessica.sato@contoso.com",
+    "assignedRoles": [
+      "SharePoint Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-04T10:33:40Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "7dee94e3-5fa2-4c00-b3bc-39a907e87b20",
+    "displayName": "Lena Hoang",
+    "userPrincipalName": "lena.hoang@contoso.com",
+    "assignedRoles": [
+      "Security Reader"
+    ],
+    "lastSignInDateTime": "2025-09-06T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "47e9f91a-ca51-4789-87cb-3b40144f6389",
+    "displayName": "Amelia White",
+    "userPrincipalName": "amelia.white@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-03-01T14:07:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "12d9cf0a-7e77-4d8d-8094-6c59d56aeb44",
+    "displayName": "Yuki Santos",
+    "userPrincipalName": "yuki.santos@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-27T17:31:17Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "e4597aae-f64a-4ba9-9408-0fd01d3646cb",
+    "displayName": "Layla Jackson",
+    "userPrincipalName": "layla.jackson@contoso.com",
+    "assignedRoles": [
+      "Helpdesk Administrator"
+    ],
+    "lastSignInDateTime": "2026-03-04T15:17:20Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "b7a8ecfa-93c2-4a0d-a1d5-d6beef96a3bb",
+    "displayName": "Emily Hall",
+    "userPrincipalName": "emily.hall@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-03-07T01:50:59Z",
+    "accountEnabled": false,
+    "mfaRegistered": true
+  },
+  {
+    "id": "d2da93f2-3840-4e04-a871-dbf6062f8a8d",
+    "displayName": "Layla Williams",
+    "userPrincipalName": "layla.williams@contoso.com",
+    "assignedRoles": [
+      "Compliance Administrator"
+    ],
+    "lastSignInDateTime": "2025-05-15T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "9aa195cb-d3ed-497c-8e30-58717fb50a91",
+    "displayName": "Nikhil Martin",
+    "userPrincipalName": "nikhil.martin@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-26T19:44:51Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "f4495afc-8664-4d28-9d65-99bd224dfcac",
+    "displayName": "Arjun Martinez",
+    "userPrincipalName": "arjun.martinez@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2025-08-23T08:00:00Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "bafe4327-2917-4ca5-a296-0041f9d84825",
+    "displayName": "Ming Costa",
+    "userPrincipalName": "ming.costa@contoso.com",
+    "assignedRoles": [
+      "User"
+    ],
+    "lastSignInDateTime": "2026-02-25T00:01:06Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "c3b6677a-1198-489b-a0d8-a2fa73c67677",
+    "displayName": "Ashley Costa",
+    "userPrincipalName": "ashley.costa@contoso.com",
+    "assignedRoles": [
+      "SharePoint Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-24T12:39:12Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "ed7d3bae-0c8f-4d1a-8b91-10a59f95ede2",
+    "displayName": "Yuna Mohammed",
+    "userPrincipalName": "yuna.mohammed@contoso.com",
+    "assignedRoles": [
+      "Exchange Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-15T14:31:03Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "4cbf3c6f-d85b-4339-a97e-2191ca730a79",
+    "displayName": "Layla Souza",
+    "userPrincipalName": "layla.souza@contoso.com",
+    "assignedRoles": [
+      "Global Reader"
+    ],
+    "lastSignInDateTime": "2026-02-18T00:06:20Z",
+    "accountEnabled": true,
+    "mfaRegistered": false
+  },
+  {
+    "id": "90e2c849-acbd-4731-8562-aea674356cdd",
+    "displayName": "Ming Hassan",
+    "userPrincipalName": "ming.hassan@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-05T17:55:15Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "a38b4d7c-0cbb-4d91-8573-14a02b83a275",
+    "displayName": "Lukas Ito",
+    "userPrincipalName": "lukas.ito@contoso.com",
+    "assignedRoles": [
+      "Teams Administrator"
+    ],
+    "lastSignInDateTime": "2026-02-13T14:54:52Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "772aded3-4c19-4db1-ab31-7c4b2244bc02",
+    "displayName": "George Anderson",
+    "userPrincipalName": "george.anderson@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-03-11T18:33:39Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  },
+  {
+    "id": "b62c56a5-6491-4c66-91f0-f02bbf4dcf2d",
+    "displayName": "Mohan Smith",
+    "userPrincipalName": "mohan.smith@contoso.com",
+    "assignedRoles": [
+      "Reports Reader"
+    ],
+    "lastSignInDateTime": "2026-02-15T18:35:03Z",
+    "accountEnabled": true,
+    "mfaRegistered": true
+  }
+]

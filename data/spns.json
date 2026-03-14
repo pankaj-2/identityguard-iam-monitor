@@ -1,0 +1,572 @@
+[
+  {
+    "id": "73f0e5f4-f935-4a2b-a2e0-ba9528d95c6f",
+    "displayName": "AzureDevOpsServicePrincipal",
+    "appRoles": [
+      "Files.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-06-27T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-08-04T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-23T10:16:23Z"
+  },
+  {
+    "id": "dc89c1d5-b5dc-461e-8896-be6cbe39c958",
+    "displayName": "BackupAutomationApp",
+    "appRoles": [
+      "Owner"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-08-24T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-10-04T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-30T22:57:46Z"
+  },
+  {
+    "id": "fcea2792-3f0c-450c-8b2b-670e17505444",
+    "displayName": "ComplianceScannerSP",
+    "appRoles": [
+      "Owner"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-05-22T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-12-17T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-11T07:46:41Z"
+  },
+  {
+    "id": "26195e36-91b6-48dd-849c-b9dbd5126d86",
+    "displayName": "DataPipelineOrchestrator",
+    "appRoles": [
+      "Directory.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-08-31T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-12-30T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": null
+  },
+  {
+    "id": "7f07f488-f24c-466e-b6c9-c879b60880ab",
+    "displayName": "EmailRelayConnector",
+    "appRoles": [
+      "Reader"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-04-20T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-09-04T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-25T18:48:52Z"
+  },
+  {
+    "id": "7575f483-aea5-47b5-acdf-c8b862364eeb",
+    "displayName": "FinanceReportingApp",
+    "appRoles": [
+      "Owner"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-05-07T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-10-10T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-28T00:27:25Z"
+  },
+  {
+    "id": "47f74e24-48a7-493e-bd2d-b7e13e17dc2f",
+    "displayName": "GitHubActionsDeployer",
+    "appRoles": [
+      "Files.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-06-25T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-05-24T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2025-08-24T08:00:00Z"
+  },
+  {
+    "id": "8d5e21e4-48bb-4785-a6b1-c924763acf71",
+    "displayName": "HRSystemIntegration",
+    "appRoles": [
+      "User.Read.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-05-02T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-07-27T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-15T05:04:40Z"
+  },
+  {
+    "id": "6521e482-cca7-4bd8-8c23-bb659237612b",
+    "displayName": "IdentityGovernanceSP",
+    "appRoles": [
+      "User.Read.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-11-21T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2025-08-18T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2025-02-13T08:00:00Z"
+  },
+  {
+    "id": "6140667c-06cb-4b84-ad4f-b800f0e2b85a",
+    "displayName": "JiraCloudConnector",
+    "appRoles": [
+      "Mail.Send"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-08-08T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-06-01T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-12T21:49:09Z"
+  },
+  {
+    "id": "3b478ef5-a53c-44b1-ba2e-540916e488bb",
+    "displayName": "KeyVaultAccessor",
+    "appRoles": [
+      "Device.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-04-18T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-07-12T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-15T04:44:33Z"
+  },
+  {
+    "id": "73730849-be32-4b5c-8c5c-1406f026a270",
+    "displayName": "LogAnalyticsCollector",
+    "appRoles": [
+      "User.Read.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-10-01T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-07-02T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-16T22:12:39Z"
+  },
+  {
+    "id": "54bc06af-6aa7-45de-8818-6937d54cf248",
+    "displayName": "MonitoringAgentSP",
+    "appRoles": [
+      "Directory.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-03-20T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-10-02T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-09T15:19:53Z"
+  },
+  {
+    "id": "34e6dc00-039c-4f4c-a12d-c22a4e35afa2",
+    "displayName": "NightlyBatchProcessor",
+    "appRoles": [
+      "Policy.ReadWrite.ConditionalAccess"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-09-17T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2025-12-04T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-15T20:37:14Z"
+  },
+  {
+    "id": "8361b99b-f933-4c23-b66a-d58c62ce2739",
+    "displayName": "OnboardingAutomation",
+    "appRoles": [
+      "Application.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-12-10T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-01-20T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-04T23:47:49Z"
+  },
+  {
+    "id": "162fbe2f-1276-4880-89da-bacea9a2dcc8",
+    "displayName": "PowerBIDatasetRefresher",
+    "appRoles": [
+      "Application.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-02-13T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-02-03T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-02T11:28:31Z"
+  },
+  {
+    "id": "d04c0b2b-8e55-4322-b4c6-3d7c129e066c",
+    "displayName": "QuarantineManagerSP",
+    "appRoles": [
+      "Device.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-03-10T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-11-12T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2024-10-30T08:00:00Z"
+  },
+  {
+    "id": "765ffc39-a4e5-47d1-b124-76449e730418",
+    "displayName": "ReportingServiceSP",
+    "appRoles": [
+      "Files.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-01-15T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-03-02T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-04T17:55:30Z"
+  },
+  {
+    "id": "bea1f068-3213-4968-be42-ea6ee18c92d7",
+    "displayName": "SecurityAuditAutomation",
+    "appRoles": [
+      "Device.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-01-19T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-02-17T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-22T23:22:57Z"
+  },
+  {
+    "id": "52eebf3f-6978-48a7-8606-1e72c0579cd0",
+    "displayName": "TeamsNotificationBot",
+    "appRoles": [
+      "Owner"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-04-08T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2025-06-27T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-09T22:30:32Z"
+  },
+  {
+    "id": "b719e6b2-7f08-4467-84bb-b1385bd01357",
+    "displayName": "UserProvisioningService",
+    "appRoles": [
+      "Contributor"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-06-10T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-04-25T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-19T22:55:19Z"
+  },
+  {
+    "id": "6dfc3531-f61d-4bb7-b44b-e1e7cf3c7b45",
+    "displayName": "VaultSecretsReader",
+    "appRoles": [
+      "Owner"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-07-14T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2025-05-03T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-03T15:35:31Z"
+  },
+  {
+    "id": "061196b3-9be5-4080-97c9-149549f061de",
+    "displayName": "WebhookRelayApp",
+    "appRoles": [
+      "Policy.ReadWrite.ConditionalAccess"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-05-25T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-07-17T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-14T13:18:48Z"
+  },
+  {
+    "id": "c0b76794-37cb-4251-80a3-d8cfa4c5d549",
+    "displayName": "XeroFinanceConnector",
+    "appRoles": [
+      "Files.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-12-23T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-08-13T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-10T03:56:32Z"
+  },
+  {
+    "id": "49f28579-5df1-484d-9ef7-4e1e7099f1f3",
+    "displayName": "YammerIntegrationSP",
+    "appRoles": [
+      "Owner"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2026-07-27T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-03-30T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2025-08-02T08:00:00Z"
+  },
+  {
+    "id": "8d4c7e3f-d686-4f62-bb87-12df7de5eed9",
+    "displayName": "ZendeskSyncService",
+    "appRoles": [
+      "Policy.ReadWrite.ConditionalAccess"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-02-03T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2026-10-06T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-03-12T00:14:32Z"
+  },
+  {
+    "id": "0a2145a6-3a4c-4d1a-ada0-26809cb34369",
+    "displayName": "AlertOrchestrationSP",
+    "appRoles": [
+      "Device.ReadWrite.All"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-10-01T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2025-06-19T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-03T02:36:37Z"
+  },
+  {
+    "id": "7402e16c-9a95-4bf0-ba5a-2e56f7ae4f2f",
+    "displayName": "BackupVerificationApp",
+    "appRoles": [
+      "Mail.Send"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2027-05-14T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-06-05T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-01-23T21:16:22Z"
+  },
+  {
+    "id": "76dd4f6f-73fd-4ade-b6a9-f43793a969af",
+    "displayName": "CertRenewalBot",
+    "appRoles": [
+      "Contributor"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-01-19T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2025-04-16T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-21T05:38:54Z"
+  },
+  {
+    "id": "99e1ff0f-c56d-42be-94a5-79c57a2789e7",
+    "displayName": "DisasterRecoveryAgent",
+    "appRoles": [
+      "Policy.ReadWrite.ConditionalAccess"
+    ],
+    "keyCredentials": [
+      {
+        "endDateTime": "2028-03-07T08:00:00Z",
+        "type": "AsymmetricX509Cert"
+      }
+    ],
+    "passwordCredentials": [
+      {
+        "endDateTime": "2027-05-13T08:00:00Z"
+      }
+    ],
+    "lastSignInDateTime": "2026-02-23T23:13:06Z"
+  }
+]

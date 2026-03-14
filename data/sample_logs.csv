@@ -1,0 +1,81 @@
+id,userPrincipalName,displayName,ipAddress,location_city,location_countryOrRegion,createdDateTime,riskLevel,riskState,clientAppUsed,status_errorCode
+bb099b05-60a1-49f9-96cf-a3f0e307d442,sakura.dubois@contoso.com,Sakura Dubois,166.39.233.69,Barcelona,ES,2026-03-01T04:25:46Z,none,none,Mobile Apps and Desktop clients,0
+3d7627ca-723a-44f0-8b18-bc6d127d4e41,hana.johnson@contoso.com,Hana Johnson,117.95.172.244,Berlin,DE,2026-03-06T14:51:36Z,none,none,Other clients,90095
+0800c54c-4114-4dbf-8a17-12230ec9232e,arjun.ito@contoso.com,Arjun Ito,10.159.18.61,The Hague,NL,2026-02-19T16:04:26Z,none,none,Exchange ActiveSync,0
+4697fb65-b2c5-494a-b6f6-121c9345e65b,george.anderson@contoso.com,George Anderson,105.30.36.12,Edinburgh,GB,2026-02-12T09:40:19Z,none,none,Browser,50074
+3afd894a-27cd-4dc3-91e7-fd1371692aab,deepa.pham@contoso.com,Deepa Pham,77.164.247.109,Milan,IT,2026-03-11T17:37:23Z,none,none,Exchange ActiveSync,0
+4e4ae6ef-e906-4982-ae4a-3edf33ab9bbe,priya.davis@contoso.com,Priya Davis,176.14.39.39,Edinburgh,GB,2026-02-27T05:23:20Z,none,none,Other clients,0
+6e55fa7a-18ee-42b1-9058-300670a07308,maximilian.thompson@contoso.com,Maximilian Thompson,66.234.212.242,Monterrey,MX,2026-02-12T23:06:50Z,none,none,SMTP,0
+1c229b70-7f86-424d-9374-b39be9d1d61a,wei.tran@contoso.com,Wei Tran,248.58.221.174,Amsterdam,NL,2026-02-28T05:50:12Z,none,none,SMTP,0
+b18dff4e-9b35-468d-a275-e2c69ac74e80,mohan.smith@contoso.com,Mohan Smith,54.161.55.68,Chennai,IN,2026-02-11T08:53:12Z,none,none,Browser,0
+11ff1d10-5f4f-4347-b9b0-04f5a2d896ef,pooja.garcia@contoso.com,Pooja Garcia,178.127.74.170,The Hague,NL,2026-03-11T02:38:34Z,none,none,SMTP,0
+3cb575c0-257c-40fa-b203-df46c7d006f2,arjun.thomas@contoso.com,Arjun Thomas,93.160.194.128,Florence,IT,2026-03-01T06:47:27Z,none,none,SMTP,0
+763376aa-acc6-45d9-900f-ec71018089b7,lena.laurent@contoso.com,Lena Laurent,4.142.105.24,Seoul,KR,2026-02-20T02:40:25Z,none,none,Mobile Apps and Desktop clients,0
+bcd4e7a7-00a1-45eb-876b-eadccc78a473,michael.santos@contoso.com,Michael Santos,103.107.187.25,Dubai,AE,2026-02-28T21:07:31Z,none,none,Exchange ActiveSync,90095
+7a18e598-e15c-4d6a-b3fe-6d30d5b9da42,rohan.le@contoso.com,Rohan Le,105.116.177.153,Osaka,JP,2026-02-25T05:50:00Z,none,none,SMTP,0
+4620d47f-55fb-463b-bd16-f245e89b28b8,fatima.laurent@contoso.com,Fatima Laurent,24.59.247.173,Basel,CH,2026-03-03T12:43:59Z,none,none,Other clients,0
+9e9133d1-9119-45c3-acfd-d0741f252307,pooja.garcia@contoso.com,Pooja Garcia,81.31.191.138,Singapore,SG,2026-03-07T04:13:48Z,medium,atRisk,Mobile Apps and Desktop clients,0
+9078d336-c20c-46ff-aecb-ea7d8441784e,camille.martinez@contoso.com,Camille Martinez,26.114.43.178,Edinburgh,GB,2026-03-10T11:14:05Z,none,none,Exchange ActiveSync,0
+f46e1182-b188-479c-bb19-cf8200f6e251,kavya.smith@contoso.com,Kavya Smith,135.153.73.252,Ottawa,CA,2026-03-05T08:22:12Z,none,none,Browser,0
+808b4f9e-4aec-47e2-b2e4-f524ff470fe8,suresh.garcia@contoso.com,Suresh Garcia,8.100.87.172,Hamburg,DE,2026-02-27T00:42:33Z,none,none,SMTP,0
+e115d40b-a84b-4575-ad6d-8e26f33d4b64,miguel.fontaine@contoso.com,Miguel Fontaine,158.105.241.244,Nice,FR,2026-02-22T04:06:29Z,none,none,Exchange ActiveSync,65001
+4e1b6571-0424-4a25-b502-4e28e1052995,lena.laurent@contoso.com,Lena Laurent,96.111.38.63,Delhi,IN,2026-02-17T06:41:38Z,none,none,Other clients,0
+be23261a-d2ae-49ad-a0b8-1bcbba5c7fdf,emily.hall@contoso.com,Emily Hall,22.165.110.35,Tokyo,JP,2026-03-13T19:22:24Z,none,none,SMTP,0
+327afe43-15cf-43b9-aaa6-e7ac581e5e2a,miguel.fontaine@contoso.com,Miguel Fontaine,99.49.236.154,Johannesburg,ZA,2026-03-06T17:24:51Z,none,none,Other clients,0
+b6458f0e-10c5-4147-ba95-f0d947b68562,astrid.nair@contoso.com,Astrid Nair,242.91.77.193,Mumbai,IN,2026-02-17T13:35:30Z,none,none,SMTP,0
+eac058b1-2e39-48d3-b3d4-34a672005c78,ashley.schneider@contoso.com,Ashley Schneider,117.24.170.55,Bergen,NO,2026-03-08T04:05:08Z,none,none,Other clients,50126
+fa26b7c9-ca4a-45a8-a3e4-02756534dcd8,astrid.nair@contoso.com,Astrid Nair,213.196.142.54,Amsterdam,NL,2026-03-09T13:46:56Z,none,none,Other clients,50126
+50c55214-d6c0-4c6f-8875-ba736c9caf92,deepa.pham@contoso.com,Deepa Pham,124.89.86.142,Singapore,SG,2026-02-15T03:31:26Z,none,none,Other clients,0
+658ae878-6251-48fd-b11f-2fac01c071ab,ashley.costa@contoso.com,Ashley Costa,248.14.65.241,Singapore,SG,2026-02-26T17:38:49Z,none,none,SMTP,0
+173965f0-3026-436c-ad9b-a2a88cdbd197,arjun.ito@contoso.com,Arjun Ito,26.204.180.30,Guadalajara,MX,2026-02-27T15:21:33Z,none,none,Other clients,65001
+8fbfbbb0-e362-424a-a6ca-b7511a9b4a08,layla.williams@contoso.com,Layla Williams,92.203.202.61,Sydney,AU,2026-02-21T07:52:00Z,none,none,Other clients,53003
+891141a5-0c77-4511-ad8a-9c8cd0e57aef,emily.hall@contoso.com,Emily Hall,67.98.84.55,London,GB,2026-03-13T19:31:24Z,none,none,SMTP,0
+7f157373-d12b-4313-8dd3-eb7d6252beee,camille.davis@contoso.com,Camille Davis,139.127.113.21,Abu Dhabi,AE,2026-02-19T19:42:28Z,none,none,Other clients,0
+b93a0b99-77c6-4e41-bf19-d6ba052ec3f5,wei.tran@contoso.com,Wei Tran,176.200.191.250,Seattle,US,2026-03-06T07:23:05Z,none,none,Browser,0
+58ee148a-4d46-4739-89ee-70b2b6d4ac9c,astrid.nair@contoso.com,Astrid Nair,138.192.189.140,Seattle,US,2026-02-17T13:49:30Z,none,none,Other clients,0
+49672316-d679-4a30-943e-944457a282bc,fang.ito@contoso.com,Fang Ito,98.147.92.148,Singapore,SG,2026-03-01T16:53:45Z,none,none,Exchange ActiveSync,0
+8e9a0520-63c4-4f36-9453-f14664fa3d54,wei.lee@contoso.com,Wei Lee,202.130.69.211,Birmingham,GB,2026-02-17T18:38:01Z,none,none,Browser,0
+b529813e-b5f7-4474-ae1f-b0f31604ac09,astrid.nair@contoso.com,Astrid Nair,126.143.195.62,Mexico City,MX,2026-03-12T00:13:34Z,medium,atRisk,SMTP,0
+3b005598-5c6e-4cc2-8210-79d3bf42d536,yuna.mohammed@contoso.com,Yuna Mohammed,159.227.242.144,Stockholm,SE,2026-02-21T00:29:59Z,none,none,Exchange ActiveSync,90095
+bdf7b79b-8660-46cb-a31e-fcf9d601ccaa,kavya.jackson@contoso.com,Kavya Jackson,193.126.27.224,Naples,IT,2026-02-20T03:19:05Z,none,none,Browser,0
+cad132ca-d83e-457c-a018-ef108f496a15,layla.souza@contoso.com,Layla Souza,45.121.133.167,Chicago,US,2026-02-24T06:11:12Z,none,none,SMTP,0
+5350f25a-5e2c-4f5e-9d7e-2b41b05b7373,sakura.dubois@contoso.com,Sakura Dubois,219.85.219.173,The Hague,NL,2026-02-19T19:18:55Z,none,none,Other clients,0
+caac7643-c55f-4231-b1d8-97d04a586b41,layla.jackson@contoso.com,Layla Jackson,168.249.40.20,Dubai,AE,2026-02-19T03:33:05Z,none,none,SMTP,0
+8d7c77c6-5064-458c-bf75-7c2735fa4fdc,layla.jackson@contoso.com,Layla Jackson,63.213.240.23,Basel,CH,2026-02-23T23:39:06Z,medium,atRisk,Exchange ActiveSync,0
+a11c33c5-096f-41f0-8275-0149d3d9ff62,wei.tran@contoso.com,Wei Tran,221.117.19.176,Bengaluru,IN,2026-03-04T09:41:16Z,none,none,Mobile Apps and Desktop clients,0
+88229ada-99df-40a6-babf-11e95f07ba69,lukas.ito@contoso.com,Lukas Ito,91.57.163.49,Johannesburg,ZA,2026-02-18T00:21:09Z,none,none,Other clients,0
+8627470c-a008-4804-8a2c-6cf1b55c2552,rohan.dupont@contoso.com,Rohan Dupont,80.148.174.233,Brisbane,AU,2026-03-10T13:58:01Z,high,atRisk,SMTP,0
+95e99f31-ab61-45e7-9a4d-0f08fc6913ff,valentina.laurent@contoso.com,Valentina Laurent,207.236.138.199,Adelaide,AU,2026-02-11T11:42:21Z,medium,atRisk,SMTP,0
+7d9417e0-a230-4508-b686-fa4a531fabeb,pierre.young@contoso.com,Pierre Young,160.163.150.141,The Hague,NL,2026-03-10T05:51:43Z,none,none,Exchange ActiveSync,50126
+6043b514-75f1-48bf-83ad-f83dd0cbd417,nour.anderson@contoso.com,Nour Anderson,249.24.121.90,Adelaide,AU,2026-02-28T11:07:29Z,none,none,SMTP,0
+49f9baeb-bf63-4e2f-95d3-033c3daa3292,felix.lima@contoso.com,Felix Lima,21.121.5.192,Bergen,NO,2026-02-17T18:43:07Z,high,confirmedCompromised,Other clients,0
+f3a9f110-31f5-4192-ad57-025876fed3f3,maximilian.thompson@contoso.com,Maximilian Thompson,107.45.52.34,Paris,FR,2026-02-12T22:39:13Z,none,none,Other clients,0
+3d8ad882-292b-4b20-9e2a-0c81de35676c,rohan.weber@contoso.com,Rohan Weber,243.158.12.187,Monterrey,MX,2026-03-10T17:27:46Z,none,none,Other clients,53003
+eb9c3e09-9e8b-4f7e-b0a6-6c2aaa7e22e6,nikhil.martin@contoso.com,Nikhil Martin,30.249.198.104,Hyderabad,IN,2026-03-11T21:43:40Z,none,none,Other clients,0
+a5d5392c-931f-4c80-8358-570dcf7af2ea,yuna.mohammed@contoso.com,Yuna Mohammed,178.63.79.170,Dubai,AE,2026-03-11T22:45:35Z,medium,atRisk,Other clients,0
+61afa1ae-5a24-4d5b-9b6b-21e522f751f0,suresh.garcia@contoso.com,Suresh Garcia,216.120.236.33,Rio de Janeiro,BR,2026-02-27T00:55:33Z,none,none,Other clients,0
+d497c22c-1b1f-4430-9c3d-603afc910629,arjun.ito@contoso.com,Arjun Ito,147.99.60.220,Abu Dhabi,AE,2026-02-15T01:15:45Z,none,none,SMTP,0
+6bb5d58e-be32-46e7-9db4-8c5c4cadeaab,felix.lima@contoso.com,Felix Lima,135.30.191.17,Brisbane,AU,2026-03-13T03:12:34Z,none,none,SMTP,50126
+0a791af1-f833-4256-96e5-33b94b31a2e1,yuki.santos@contoso.com,Yuki Santos,151.254.110.79,Bergen,NO,2026-02-12T17:40:05Z,none,none,Other clients,0
+54172e4a-c9ef-461e-a9b5-a6a763957a17,jessica.sato@contoso.com,Jessica Sato,26.224.217.113,Bengaluru,IN,2026-02-25T13:38:05Z,none,none,Browser,0
+8ca52f7e-fc93-46e4-a3ae-9d39b0e894dc,arjun.martinez@contoso.com,Arjun Martinez,138.32.117.95,Stockholm,SE,2026-02-16T19:59:44Z,none,none,Exchange ActiveSync,0
+28591ee1-e35d-4368-94d1-a8d4c5021e3c,ananya.walker@contoso.com,Ananya Walker,26.252.176.95,Ottawa,CA,2026-02-28T00:05:37Z,none,none,Other clients,53003
+31ddb44a-d653-483b-ac3b-457cd7eda56c,kavya.smith@contoso.com,Kavya Smith,182.137.33.71,Singapore,SG,2026-03-03T02:41:00Z,none,none,Browser,0
+87e9135c-cd03-4228-97f2-5e3e2d6a4d96,hana.johnson@contoso.com,Hana Johnson,156.153.203.159,Manchester,GB,2026-03-10T14:11:34Z,none,none,Mobile Apps and Desktop clients,0
+a0f3cf27-b957-47f1-a42e-175bfb0e413d,amelia.white@contoso.com,Amelia White,87.8.127.218,Yokohama,JP,2026-02-23T12:17:36Z,medium,atRisk,Exchange ActiveSync,0
+1ebbddf4-01a6-4d96-8edf-8a463fe1b717,priya.davis@contoso.com,Priya Davis,184.75.131.181,Dubai,AE,2026-02-22T03:28:01Z,none,none,Exchange ActiveSync,0
+6eb17387-3c08-444c-9e06-f7710711930e,kavya.jackson@contoso.com,Kavya Jackson,8.244.64.52,Tokyo,JP,2026-02-17T11:57:12Z,high,confirmedCompromised,Browser,0
+c467f0c3-8866-457c-8c8e-493bb57bbf88,suresh.garcia@contoso.com,Suresh Garcia,226.153.180.226,Cape Town,ZA,2026-03-02T23:38:43Z,medium,atRisk,Exchange ActiveSync,0
+4e0f3023-4947-4f84-b91d-4cc3dbcb0767,hana.johnson@contoso.com,Hana Johnson,28.126.183.233,New York,US,2026-02-26T19:32:17Z,none,none,SMTP,90095
+6b256333-ce9f-4c88-881c-81fd0d4399fc,camille.martinez@contoso.com,Camille Martinez,229.213.118.182,Geneva,CH,2026-03-10T18:36:20Z,medium,atRisk,Mobile Apps and Desktop clients,0
+69ce98ac-f869-42e0-a383-eafc06175b9d,jessica.sato@contoso.com,Jessica Sato,118.66.171.3,Barcelona,ES,2026-03-06T17:19:44Z,none,none,SMTP,0
+7fa2c63d-5dc6-4735-8894-93916a5c4d9a,michael.santos@contoso.com,Michael Santos,220.252.38.253,Amsterdam,NL,2026-02-16T12:59:43Z,none,none,Mobile Apps and Desktop clients,50074
+d2798684-e5ce-4922-a0a1-1d1be10c9696,antoine.fontaine@contoso.com,Antoine Fontaine,179.198.78.218,Leeds,GB,2026-02-19T11:44:54Z,high,atRisk,Other clients,0
+96693ea9-aabb-46fa-bae1-5ecf6a6f98a8,astrid.mohammed@contoso.com,Astrid Mohammed,95.18.130.166,Madrid,ES,2026-03-02T14:32:18Z,medium,atRisk,Exchange ActiveSync,0
+ecc8dddf-de50-4c82-86a2-1041b24d1f7f,rohan.le@contoso.com,Rohan Le,120.180.66.197,Nice,FR,2026-02-21T04:23:47Z,high,atRisk,Exchange ActiveSync,0
+a831ae22-6e60-4a5f-ae1b-4a5e462f87e4,raj.patel@contoso.com,Raj Patel,80.202.113.9,Paris,FR,2026-02-13T11:18:58Z,none,none,Other clients,0
+ef654e59-6824-4b93-98a1-f8152fa23d7f,aiko.allen@contoso.com,Aiko Allen,141.85.91.180,Pretoria,ZA,2026-02-25T20:32:13Z,medium,atRisk,SMTP,0
+c701d803-b4a9-4742-abe7-0dd297c72646,fatima.laurent@contoso.com,Fatima Laurent,98.99.254.170,The Hague,NL,2026-02-26T09:01:09Z,none,none,Mobile Apps and Desktop clients,0
+e2516fe3-55ba-402c-b7e5-a847908a9ae9,pierre.young@contoso.com,Pierre Young,212.146.236.74,Bengaluru,IN,2026-02-16T22:21:13Z,none,none,SMTP,0
+8e1c027e-b8de-4218-b3ff-7e035b78d2fb,kavya.jackson@contoso.com,Kavya Jackson,113.226.179.125,Montreal,CA,2026-02-25T03:00:42Z,none,none,Browser,0
+dae9217f-f0d3-4501-9b40-8c88be6a5a4c,ajay.fontaine@contoso.com,Ajay Fontaine,223.98.159.175,Barcelona,ES,2026-03-09T02:54:21Z,none,none,Mobile Apps and Desktop clients,0
