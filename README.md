@@ -68,6 +68,3 @@ Privileged accounts flagged: 13
 SPNs with critical issues: 6
 ```
 
-## JD alignment
-
-Built to demonstrate: IAM monitoring · GenAI for identity analysis · UAR automation · incident detection · security metrics — as required by Visa IAM Engineer role.
